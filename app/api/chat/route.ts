@@ -30,20 +30,19 @@ const generateImageFromPixlr = async (
       maxBodyLength: Infinity,
       url: "https://pixlr.com/api/ai/remix/",
       headers: {
-        accept: "*/*",
-        "accept-language": "en-US,en;q=0.9,vi;q=0.8",
+        accept: "*/*", // Giữ lại nếu cần thiết
+        "accept-language": "en;q=0.8", // Chỉ cung cấp ngôn ngữ chung thay vì danh sách chi tiết
         origin: "https://pixlr.com",
-        priority: "u=1, i",
         referer: "https://pixlr.com/vn/image-generator/",
         "sec-ch-ua":
-          '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"macOS"',
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
+          '"Not A;Brand";v="99", "GenericBrowser";v="99", "Chromium";v="99"', // Sử dụng thông tin chung chung
+        "sec-ch-ua-mobile": "?0", // Giữ lại nếu bắt buộc
+        "sec-ch-ua-platform": '"Linux"', // Sử dụng một giá trị phổ biến
+        "sec-fetch-dest": "empty", // Có thể giữ nguyên
+        "sec-fetch-mode": "cors", // Có thể giữ nguyên
+        "sec-fetch-site": "same-origin", // Có thể giữ nguyên
         "user-agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.0.0 Safari/537.36", // Sử dụng thông tin chung chung
         Cookie: cookie,
       },
       data: data,
