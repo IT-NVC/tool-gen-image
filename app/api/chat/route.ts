@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import axios from "axios";
 import FormData from "form-data";
 const promptDefault =
-  "Viết một prompt mô tả hình ảnh này bằng tiếng anh thật chi tiết và bỏ qua text trong ảnh. Chỉ trả về prompt";
+  "Describe this image concisely, highlighting key elements and overall mood. Ignore text.";
 const generateImageFromPixlr = async (
   imageBase64: string,
   prompt: string,
